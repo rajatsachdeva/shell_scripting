@@ -7,6 +7,10 @@
 
 source ./setx.sh
 
+# we can also source the file using 
+# "dot space script"
+# . ./setx.sh
+
 echo "value of x is $x"
 
 # Output 
