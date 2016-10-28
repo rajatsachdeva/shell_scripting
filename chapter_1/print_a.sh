@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+# to unset a variable use 
+# unset <variable name>
 # Print the value of variable A
 
 
