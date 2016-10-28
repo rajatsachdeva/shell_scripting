@@ -37,4 +37,10 @@ echo 'myArray[2] has ' ${myArray[2]}
 myArray2["hello"]="world"
 echo 'myArray2[hello] has ' ${myArray2["hello"]}
 
-
+#OUTPUT
+#lstring = abcdef
+#ustring = ABCDEF
+#read_only = Some read only value
+#./chapter_2/declare.sh: line 30: read_only: readonly variable
+#myArray[2] has  2nd value
+#myArray2[hello] has  world
