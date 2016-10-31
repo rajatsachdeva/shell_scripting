@@ -1,0 +1,5 @@
+find: `/etc/polkit-1/localauthority': Permission denied
+find: `/etc/ssl/private': Permission denied
+/etc/bash_completion.d/grub
+/etc/default/grub
+find: `/etc/cups/ssl': Permission denied
