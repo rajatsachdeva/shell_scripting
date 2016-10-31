@@ -3,6 +3,10 @@
 # In this example the use of case statement 
 # is shown.
 
+# Here a read command is use to read from the
+# command line
+# this read command takes a string as an input
+# and thus helps us to take any kind of input.
 valid=0
 
 while
