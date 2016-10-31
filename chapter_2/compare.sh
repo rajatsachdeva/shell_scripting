@@ -38,6 +38,7 @@ fi
 # Arithmetic expansion and evaluation is done by placing
 # an integer expression using the following format:
 # ((expression))
+# (( x==y ))
 # Here numerical comparison is done
 
 echo -e \" [ '$x' = '$y' ] \" : NUMERICAL COMPARISON
