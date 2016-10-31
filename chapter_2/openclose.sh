@@ -2,6 +2,11 @@
 
 # use of file descriptors
 
+# lsof -p $$
+# this lists open files for the current running
+# process.
+# as $$ gives the current PID
+
 # open a file in read mode 
 exec 19<data_file
 lsof -p $$
