@@ -1,15 +1,18 @@
 #!/bin/bash
 
-echo -n "Print message? "
+# In this example the use of case statement 
+# is shown.
+
 valid=0
 
 while
    [ $valid == 0 ]
 do 
+    echo -n "Print message? "
     read ans
     case $ans in
     yes|YES|y|Y ) echo will print the message
-                  echo The Message
+                  echo $1
                   valid=1
                   ;;
     [nN][oO] ) echo will not print the message

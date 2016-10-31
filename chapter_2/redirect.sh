@@ -2,6 +2,11 @@
 
 # This shows the use of redirection operators
 
+# At the file descriptor level, 
+# stdin is defined to be file descriptor 0, 
+# stdout is defined to be file descriptor 1; 
+# and stderr is defined to be file descriptor 2.
+
 # we search in /etc directory for the files
 # with name grub in them 
 # and the result is redirected to file 'grub.out'
