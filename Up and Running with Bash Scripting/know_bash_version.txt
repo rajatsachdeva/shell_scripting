@@ -1,0 +1,7 @@
+1. How to know the bash verison ?
+
+	use following command:
+	echo $BASH_VERSION
+
+	OUTPUT:
+	3.2.57(1)-release	
