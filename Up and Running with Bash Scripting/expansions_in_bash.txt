@@ -1,0 +1,22 @@
+# Expansions
+
+# Brace Expansions
+
+Rajats-MacBook-Pro:fruit rohanrajat$ pwd
+/Users/rohanrajat/Documents/Bash Scripting/shell_scripting/Up and Running with Bash Scripting/Exercise Files/fruit
+Rajats-MacBook-Pro:fruit rohanrajat$ ls
+Rajats-MacBook-Pro:fruit rohanrajat$ ll
+
+# Remember not to add any spaces between the file names as shown below
+Rajats-MacBook-Pro:fruit rohanrajat$ touch {apple, orange, grapes, mango}
+Rajats-MacBook-Pro:fruit rohanrajat$ ls
+grapes, mango}  orange, {apple,
+Rajats-MacBook-Pro:fruit rohanrajat$ rm *
+Rajats-MacBook-Pro:fruit rohanrajat$ ls
+
+# correct way
+Rajats-MacBook-Pro:fruit rohanrajat$ touch {apple,orange,grapes,mango}
+Rajats-MacBook-Pro:fruit rohanrajat$ ls
+apple  grapes mango  orange
+Rajats-MacBook-Pro:fruit rohanrajat$ 
+
