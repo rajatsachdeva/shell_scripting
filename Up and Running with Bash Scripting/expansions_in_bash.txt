@@ -20,3 +20,27 @@ Rajats-MacBook-Pro:fruit rohanrajat$ ls
 apple  grapes mango  orange
 Rajats-MacBook-Pro:fruit rohanrajat$ 
 
+# We can achieve the same behaviour using touch with file names separated with spaces
+# But this technique does not scale well when creating a large number of files.
+
+Rajats-MacBook-Pro:fruit rohanrajat$ pwd
+/Users/rohanrajat/Documents/Bash Scripting/shell_scripting/Up and Running with Bash Scripting/Exercise Files/fruit
+Rajats-MacBook-Pro:fruit rohanrajat$ ls
+apple  grapes mango  orange
+Rajats-MacBook-Pro:fruit rohanrajat$ touch file_{1..1000}
+Rajats-MacBook-Pro:fruit rohanrajat$ l
+apple     file_148  file_199  file_249  file_3    file_35   file_40   file_450  file_500  file_551  file_601  file_652  file_702  file_753  file_803  file_854  file_904  file_955
+file_1    file_149  file_2    file_25   file_30   file_350  file_400  file_451  file_501  file_552  file_602  file_653  file_703  file_754  file_804  file_855  file_905  file_956
+file_10   file_15   file_20   file_250  file_300  file_351  file_401  file_452  file_502  file_553  file_603  file_654  file_704  file_755  file_805  file_856  file_906  file_957
+file_100  file_150  file_200  file_251  file_301  file_352  file_402  file_453  file_503  file_554  file_604  file_655  file_705  file_756  file_806  file_857  file_907  file_958
+file_1000 file_151  file_201  file_252  file_302  file_353  file_403  file_454  file_504  file_555  file_605  file_656  file_706  file_757  file_807  file_858  file_908  file_959
+file_101  file_152  file_202  file_253  file_303  file_354  file_404  file_455  file_505  file_556  file_606  file_657  file_707  file_758  file_808  file_859  file_909  file_96
+file_102  file_153  file_203  file_254  file_304  file_355  file_405  file_456  file_506  file_557  file_607  file_658  file_708  file_759  file_809  file_86   file_91   file_960
+file_103  file_154  file_204  file_255  file_305  file_356  file_406  file_457  file_507  file_558  file_608  file_659  file_709  file_76   file_81   file_860  file_910  file_961
+file_104  file_155  file_205  file_256  file_306  file_357  file_407  file_458  file_508  file_559  file_609  file_66   file_71   file_760  file_810  file_861  file_911  file_962
+file_105  file_156  file_206  file_257  file_307  file_358  file_408  file_459  file_509  file_56   file_61   file_660  file_710  file_761  file_811  file_862  file_912  file_963
+file_106  file_157  file_207  file_258  file_308  file_359  file_409  file_46   file_51   file_560  file_610  file_661  file_711  file_762  file_812  file_863  file_913  file_964
+file_107  file_158  file_208  file_259  file_309  file_36   file_41   file_460  file_510  file_561  file_611  file_662  file_712  file_763  file_813  file_864  file_914  file_965
+file_108  file_159  file_209  file_26   file_31   file_360  file_410  file_461  file_511  file_562  file_612  file_663  file_713  file_764  file_814  file_865  file_915  file_966
+file_109  file_16   file_21   file_260  file_310  file_361  file_411  file_462  file_512  file_563  file_613  file_664  file_714  file_765  file_815  file_866  file_916  file_967
+file_11   file_160  file_210  file_261  
