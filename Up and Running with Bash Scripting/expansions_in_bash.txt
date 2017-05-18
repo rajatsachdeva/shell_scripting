@@ -69,3 +69,30 @@ Rajats-MacBook-Pro:Up and Running with Bash Scripting rohanrajat$ echo {A..0}}
 Rajats-MacBook-Pro:Up and Running with Bash Scripting rohanrajat$ echo {A..0}
 {A..0}
 Rajats-MacBook-Pro:Up and Running with Bash Scripting rohanrajat$ 
+
+
+# Capital letters comes before lower case letters
+Rajats-MacBook-Pro:Up and Running with Bash Scripting rohanrajat$ echo {A..z}
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z [  ] ^ _ ` a b c d e f g h i j k l m n o p q r s t u v w x y z
+
+
+# with bash verison 4.x
+echo {a..e..2}
+a c e
+
+Rajats-MacBook-Pro:fruit rohanrajat$ touch {apple,orange,banana}_{1..100}{w..d}
+Rajats-MacBook-Pro:fruit rohanrajat$ ls
+apple_100d  apple_28d   apple_46d   apple_64d   apple_82d   banana_100d banana_28d  banana_46d  banana_64d  banana_82d  orange_100d orange_28d  orange_46d  orange_64d  orange_82d
+apple_100e  apple_28e   apple_46e   apple_64e   apple_82e   banana_100e banana_28e  banana_46e  banana_64e  banana_82e  orange_100e orange_28e  orange_46e  orange_64e  orange_82e
+apple_100f  apple_28f   apple_46f   apple_64f   apple_82f   banana_100f banana_28f  banana_46f  banana_64f  banana_82f  orange_100f orange_28f  orange_46f  orange_64f  orange_82f
+apple_100g  apple_28g   apple_46g   apple_64g   apple_82g   banana_100g banana_28g  banana_46g  banana_64g  banana_82g  orange_100g orange_28g  orange_46g  orange_64g  orange_82g
+apple_100h  apple_28h   apple_46h   apple_64h   apple_82h   banana_100h banana_28h  banana_46h  banana_64h  banana_82h  orange_100h orange_28h  orange_46h  orange_64h  orange_82h
+apple_100i  apple_28i   apple_46i   apple_64i   apple_82i   banana_100i banana_28i  banana_46i  banana_64i  banana_82i  orange_100i orange_28i  orange_46i  orange_64i  orange_82i
+apple_100j  apple_28j   apple_46j   apple_64j   apple_82j   banana_100j banana_28j  banana_46j  banana_64j  banana_82j  orange_100j orange_28j  orange_46j  orange_64j  orange_82j
+apple_100k  apple_28k   apple_46k   apple_64k   apple_82k   banana_100k banana_28k  banana_46k  banana_64k  banana_82k  orange_100k orange_28k  orange_46k  orange_64k  orange_82k
+apple_100l  apple_28l   apple_46l   apple_64l   apple_82l   banana_100l banana_28l  banana_46l  banana_64l  banana_82l  orange_100l orange_28l  orange_46l  orange_64l  orange_82l
+apple_100m  apple_28m   apple_46m   apple_64m   apple_82m   banana_100m banana_28m  banana_46m  banana_64m  banana_82m  orange_100m orange_28m  orange_46m  orange_64m  orange_82m
+apple_100n  apple_28n   apple_46n   apple_64n   apple_82n   banana_100n banana_28n  banana_46n  banana_64n  banana_82n  orange_100n orange_28n  orange_46n  orange_64n  orange_82n
+apple_100o  apple_28o   apple_46o   apple_64o   apple_82o   banana_100o banana_28o  banana_46o  banana_64o  banana_82o  orange_100o orange_28o  orange_46o  orange_64o  orange_82o
+apple_100p  apple_28p   apple_46p   apple_64p   apple_82p   banana_100p banana_28p  banana_46p  banana_64p  banana_82p  orange_100p orange_28p  orange_46p  orange_64p  orange_82p
+apple_100q  apple_28q   apple_46q   apple_64q   apple_82q   banana_100q banana_28q  banana_46q  ...
