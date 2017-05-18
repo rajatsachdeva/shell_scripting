@@ -1,0 +1,24 @@
+How to get to a location previously entered ?
+
+# Expansions in Bash 
+
+# Prints the home directory path 
+Rajats-MacBook-Pro:~ rohanrajat$ echo ~
+/Users/rohanrajat
+
+# Prints the previous opened directory
+Rajats-MacBook-Pro:~ rohanrajat$ echo ~-
+/Users/rohanrajat/Documents/Bash Scripting/shell_scripting/Up and Running with Bash Scripting/Exercise Files/trees
+
+# Change to previous opened location
+Rajats-MacBook-Pro:~ rohanrajat$ cd ~-
+
+Rajats-MacBook-Pro:trees rohanrajat$ ls
+cedar     maple.txt pine.txt  spruce    sycamore  tree.png
+
+Rajats-MacBook-Pro:trees rohanrajat$ pwd
+/Users/rohanrajat/Documents/Bash Scripting/shell_scripting/Up and Running with Bash Scripting/Exercise Files/trees
+
+Rajats-MacBook-Pro:trees rohanrajat$ ls
+cedar     maple.txt pine.txt  spruce    sycamore  tree.png
+
