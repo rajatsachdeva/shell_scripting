@@ -57,3 +57,15 @@ echo {1..10..2}
 
 echo {1..10..3}
 1 4 7 10
+
+Rajats-MacBook-Pro:Up and Running with Bash Scripting rohanrajat$ echo {a..z}
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+Rajats-MacBook-Pro:Up and Running with Bash Scripting rohanrajat$ echo {a..Z}
+a ` _ ^ ]  [ Z
+Rajats-MacBook-Pro:Up and Running with Bash Scripting rohanrajat$ echo {A..Z}
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+Rajats-MacBook-Pro:Up and Running with Bash Scripting rohanrajat$ echo {A..0}}
+{A..0}}
+Rajats-MacBook-Pro:Up and Running with Bash Scripting rohanrajat$ echo {A..0}
+{A..0}
+Rajats-MacBook-Pro:Up and Running with Bash Scripting rohanrajat$ 
