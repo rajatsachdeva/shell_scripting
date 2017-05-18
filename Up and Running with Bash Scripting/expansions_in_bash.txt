@@ -96,3 +96,16 @@ apple_100n  apple_28n   apple_46n   apple_64n   apple_82n   banana_100n banana_2
 apple_100o  apple_28o   apple_46o   apple_64o   apple_82o   banana_100o banana_28o  banana_46o  banana_64o  banana_82o  orange_100o orange_28o  orange_46o  orange_64o  orange_82o
 apple_100p  apple_28p   apple_46p   apple_64p   apple_82p   banana_100p banana_28p  banana_46p  banana_64p  banana_82p  orange_100p orange_28p  orange_46p  orange_64p  orange_82p
 apple_100q  apple_28q   apple_46q   apple_64q   apple_82q   banana_100q banana_28q  banana_46q  ...
+
+
+# How to count the number of files in a directory 
+Rajats-MacBook-Pro:fruit rohanrajat$ touch file_{1..100}
+Rajats-MacBook-Pro:fruit rohanrajat$ l
+file_1   file_13  file_18  file_22  file_27  file_31  file_36  file_40  file_45  file_5   file_54  file_59  file_63  file_68  file_72  file_77  file_81  file_86  file_90  file_95
+file_10  file_14  file_19  file_23  file_28  file_32  file_37  file_41  file_46  file_50  file_55  file_6   file_64  file_69  file_73  file_78  file_82  file_87  file_91  file_96
+file_100 file_15  file_2   file_24  file_29  file_33  file_38  file_42  file_47  file_51  file_56  file_60  file_65  file_7   file_74  file_79  file_83  file_88  file_92  file_97
+file_11  file_16  file_20  file_25  file_3   file_34  file_39  file_43  file_48  file_52  file_57  file_61  file_66  file_70  file_75  file_8   file_84  file_89  file_93  file_98
+file_12  file_17  file_21  file_26  file_30  file_35  file_4   file_44  file_49  file_53  file_58  file_62  file_67  file_71  file_76  file_80  file_85  file_9   file_94  file_99
+Rajats-MacBook-Pro:fruit rohanrajat$ ls -l | wc -l
+     101
+
