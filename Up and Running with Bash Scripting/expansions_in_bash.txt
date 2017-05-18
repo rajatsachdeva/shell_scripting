@@ -44,3 +44,7 @@ file_107  file_158  file_208  file_259  file_309  file_36   file_41   file_460  
 file_108  file_159  file_209  file_26   file_31   file_360  file_410  file_461  file_511  file_562  file_612  file_663  file_713  file_764  file_814  file_865  file_915  file_966
 file_109  file_16   file_21   file_260  file_310  file_361  file_411  file_462  file_512  file_563  file_613  file_664  file_714  file_765  file_815  file_866  file_916  file_967
 file_11   file_160  file_210  file_261  
+
+# Using braces
+echo {1..10}
+1 2 3 4 5 6 7 8 9 10
