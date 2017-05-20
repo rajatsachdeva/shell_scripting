@@ -1,0 +1,116 @@
+# Redirection 
+
+# create a temp folder
+Rajats-MacBook-Pro:fruit rohanrajat$ mkdir ../otherfolder
+
+# Change the permissions to some file 0 for read/write/execute
+Rajats-MacBook-Pro:fruit rohanrajat$ chmod 000 *10*
+
+# Copy all the files to otherfolder
+# In verbose mode, this shows the operation step by step
+# We can see that this operation now shows the some of the files couldn't be copied 
+# permissions are not present for these files.
+
+Rajats-MacBook-Pro:fruit rohanrajat$ cp -v * ../otherfolder/
+cp: file_apple_10_a: Permission denied
+cp: file_apple_10_b: Permission denied
+cp: file_apple_10_c: Permission denied
+cp: file_apple_10_d: Permission denied
+cp: file_apple_10_e: Permission denied
+file_apple_1_a -> ../otherfolder/file_apple_1_a
+file_apple_1_b -> ../otherfolder/file_apple_1_b
+file_apple_1_c -> ../otherfolder/file_apple_1_c
+file_apple_1_d -> ../otherfolder/file_apple_1_d
+file_apple_1_e -> ../otherfolder/file_apple_1_e
+file_apple_2_a -> ../otherfolder/file_apple_2_a
+file_apple_2_b -> ../otherfolder/file_apple_2_b
+file_apple_2_c -> ../otherfolder/file_apple_2_c
+
+Rajats-MacBook-Pro:fruit rohanrajat$ ls ../otherfolder/
+file_apple_1_a  file_apple_3_d  file_apple_6_b  file_apple_8_e  file_banana_2_c file_banana_5_a file_banana_7_d file_orange_1_b file_orange_3_e file_orange_6_c file_orange_9_a
+file_apple_1_b  file_apple_3_e  file_apple_6_c  file_apple_9_a  file_banana_2_d file_banana_5_b file_banana_7_e file_orange_1_c file_orange_4_a file_orange_6_d file_orange_9_b
+file_apple_1_c  file_apple_4_a  file_apple_6_d  file_apple_9_b  file_banana_2_e file_banana_5_c file_banana_8_a file_orange_1_d file_orange_4_b file_orange_6_e file_orange_9_c
+file_apple_1_d  file_apple_4_b  file_apple_6_e  file_apple_9_c  file_banana_3_a file_banana_5_d file_banana_8_b file_orange_1_e file_orange_4_c file_orange_7_a file_orange_9_d
+file_apple_1_e  file_apple_4_c  file_apple_7_a  file_apple_9_d  file_banana_3_b file_banana_5_e file_banana_8_c file_orange_2_a file_orange_4_d file_orange_7_b file_orange_9_e
+file_apple_2_a  file_apple_4_d  file_apple_7_b  file_apple_9_e  file_banana_3_c file_banana_6_a file_banana_8_d file_orange_2_b file_orange_4_e file_orange_7_c
+file_apple_2_b  file_apple_4_e  file_apple_7_c  file_banana_1_a file_banana_3_d file_banana_6_b file_banana_8_e file_orange_2_c file_orange_5_a file_orange_7_d
+file_apple_2_c  file_apple_5_a  file_apple_7_d  file_banana_1_b file_banana_3_e file_banana_6_c file_banana_9_a file_orange_2_d file_orange_5_b file_orange_7_e
+file_apple_2_d  file_apple_5_b  file_apple_7_e  file_banana_1_c file_banana_4_a file_banana_6_d file_banana_9_b file_orange_2_e file_orange_5_c file_orange_8_a
+file_apple_2_e  file_apple_5_c  file_apple_8_a  file_banana_1_d file_banana_4_b file_banana_6_e file_banana_9_c file_orange_3_a file_orange_5_d file_orange_8_b
+file_apple_3_a  file_apple_5_d  file_apple_8_b  file_banana_1_e file_banana_4_c file_banana_7_a file_banana_9_d file_orange_3_b file_orange_5_e file_orange_8_c
+file_apple_3_b  file_apple_5_e  file_apple_8_c  file_banana_2_a file_banana_4_d file_banana_7_b file_banana_9_e file_orange_3_c file_orange_6_a file_orange_8_d
+file_apple_3_c  file_apple_6_a  file_apple_8_d  file_banana_2_b file_banana_4_e file_banana_7_c file_orange_1_a file_orange_3_d file_orange_6_b file_orange_8_e
+Rajats-MacBook-Pro:fruit rohanrajat$ 
+
+
+# 1 is for stdout and 2 is for stderr
+Rajats-MacBook-Pro:fruit rohanrajat$ cp -v * ../otherfolder/ 1> ../success.txt 2> ../failures.txt
+
+Rajats-MacBook-Pro:fruit rohanrajat$ ls ../otherfolder/
+file_apple_1_a  file_apple_3_d  file_apple_6_b  file_apple_8_e  file_banana_2_c file_banana_5_a file_banana_7_d file_orange_1_b file_orange_3_e file_orange_6_c file_orange_9_a
+file_apple_1_b  file_apple_3_e  file_apple_6_c  file_apple_9_a  file_banana_2_d file_banana_5_b file_banana_7_e file_orange_1_c file_orange_4_a file_orange_6_d file_orange_9_b
+file_apple_1_c  file_apple_4_a  file_apple_6_d  file_apple_9_b  file_banana_2_e file_banana_5_c file_banana_8_a file_orange_1_d file_orange_4_b file_orange_6_e file_orange_9_c
+file_apple_1_d  file_apple_4_b  file_apple_6_e  file_apple_9_c  file_banana_3_a file_banana_5_d file_banana_8_b file_orange_1_e file_orange_4_c file_orange_7_a file_orange_9_d
+file_apple_1_e  file_apple_4_c  file_apple_7_a  file_apple_9_d  file_banana_3_b file_banana_5_e file_banana_8_c file_orange_2_a file_orange_4_d file_orange_7_b file_orange_9_e
+file_apple_2_a  file_apple_4_d  file_apple_7_b  file_apple_9_e  file_banana_3_c file_banana_6_a file_banana_8_d file_orange_2_b file_orange_4_e file_orange_7_c
+file_apple_2_b  file_apple_4_e  file_apple_7_c  file_banana_1_a file_banana_3_d file_banana_6_b file_banana_8_e file_orange_2_c file_orange_5_a file_orange_7_d
+file_apple_2_c  file_apple_5_a  file_apple_7_d  file_banana_1_b file_banana_3_e file_banana_6_c file_banana_9_a file_orange_2_d file_orange_5_b file_orange_7_e
+file_apple_2_d  file_apple_5_b  file_apple_7_e  file_banana_1_c file_banana_4_a file_banana_6_d file_banana_9_b file_orange_2_e file_orange_5_c file_orange_8_a
+file_apple_2_e  file_apple_5_c  file_apple_8_a  file_banana_1_d file_banana_4_b file_banana_6_e file_banana_9_c file_orange_3_a file_orange_5_d file_orange_8_b
+file_apple_3_a  file_apple_5_d  file_apple_8_b  file_banana_1_e file_banana_4_c file_banana_7_a file_banana_9_d file_orange_3_b file_orange_5_e file_orange_8_c
+file_apple_3_b  file_apple_5_e  file_apple_8_c  file_banana_2_a file_banana_4_d file_banana_7_b file_banana_9_e file_orange_3_c file_orange_6_a file_orange_8_d
+file_apple_3_c  file_apple_6_a  file_apple_8_d  file_banana_2_b file_banana_4_e fil
+
+ajats-MacBook-Pro:fruit rohanrajat$ cat ../success.txt 
+file_apple_1_a -> ../otherfolder/file_apple_1_a
+file_apple_1_b -> ../otherfolder/file_apple_1_b
+file_apple_1_c -> ../otherfolder/file_apple_1_c
+file_apple_1_d -> ../otherfolder/file_apple_1_d
+file_apple_1_e -> ../otherfolder/file_apple_1_e
+file_apple_2_a -> ../otherfolder/file_apple_2_a
+file_apple_2_b -> ../otherfolder/file_apple_2_b
+file_apple_2_c -> ../otherfolder/file_apple_2_c
+file_apple_2_d -> ../otherfolder/file_apple_2_d
+file_apple_2_e -> ../otherfolder/file_apple_2_e
+file_apple_3_a -> ../otherfolder/file_apple_3_a
+file_apple_3_b -> ../otherfolder/file_apple_3_b
+file_apple_3_c -> ../otherfolder/file_apple_3_c
+file_apple_3_d -> ../otherfolder/file_apple_3_d
+file_apple_3_e -> ../otherfolder/file_apple_3_e
+file_apple_4_a -> ../otherfolder/file_apple_4_a
+file_apple_4_b -> ../otherfolder/file_apple_4_b
+file_apple_4_c -> ../otherfolder/file_apple_4_c
+file_apple_4_d -> ../otherfolder/file_apple_4_d
+file_apple_4_e -> ../otherfolder/file_apple_4_e
+file_apple_5_a -> ../otherfolder/file_apple_5_a
+file_apple_5_b -> ../otherfolder/file_apple_5_b
+file_apple_5_c -> ../otherfolder/file_apple_5_c
+file_apple_5_d -> ../otherfolder/file_apple_5_d
+file_apple_5_e -> ../otherfolder/file_apple_5_e
+file_apple_6_a -> ../otherfolder/file_apple_6_a
+file_apple_6_b -> ../otherfolder/file_apple_6_b
+file_apple_6_c -> ../otherfolder/file_apple_6_c
+file_apple_6_d -> ../otherfolder/file_apple_6_d
+file_apple_6_e -> ../otherfolder/file_apple_6_e
+file_apple_7_a -> ../otherfolder/file_apple_7_a
+file_apple_7_b -> ../otherfolder/file_apple_7_b
+file_apple_7_c -> ../otherfolder/file_apple_7_c
+
+Rajats-MacBook-Pro:fruit rohanrajat$ cat ../failures.txt 
+cp: file_apple_10_a: Permission denied
+cp: file_apple_10_b: Permission denied
+cp: file_apple_10_c: Permission denied
+cp: file_apple_10_d: Permission denied
+cp: file_apple_10_e: Permission denied
+cp: file_banana_10_a: Permission denied
+cp: file_banana_10_b: Permission denied
+cp: file_banana_10_c: Permission denied
+cp: file_banana_10_d: Permission denied
+cp: file_banana_10_e: Permission denied
+cp: file_orange_10_a: Permission denied
+cp: file_orange_10_b: Permission denied
+cp: file_orange_10_c: Permission denied
+cp: file_orange_10_d: Permission denied
+cp: file_orange_10_e: Permission denied
+Rajats-MacBook-Pro:fruit rohanrajat$ 
+
