@@ -196,3 +196,6 @@ file_apple.8 -> ../otherfolder/file_apple.8
 file_apple.9 -> ../otherfolder/file_apple.9
 Rajats-MacBook-Pro:fruit rohanrajat$ 
 
+# to Redirect the output nowhere use 
+# Output goes to nowhere in this case
+Rajats-MacBook-Pro:Up and Running with Bash Scripting rohanrajat$ ls > /dev/null 
