@@ -114,3 +114,85 @@ cp: file_orange_10_d: Permission denied
 cp: file_orange_10_e: Permission denied
 Rajats-MacBook-Pro:fruit rohanrajat$ 
 
+# To redirect standard output and error in same file use &>
+
+Rajats-MacBook-Pro:fruit rohanrajat$ rm *
+Rajats-MacBook-Pro:fruit rohanrajat$ touch file_apple.{1..30}
+Rajats-MacBook-Pro:fruit rohanrajat$ ls
+file_apple.1  file_apple.12 file_apple.15 file_apple.18 file_apple.20 file_apple.23 file_apple.26 file_apple.29 file_apple.4  file_apple.7
+file_apple.10 file_apple.13 file_apple.16 file_apple.19 file_apple.21 file_apple.24 file_apple.27 file_apple.3  file_apple.5  file_apple.8
+file_apple.11 file_apple.14 file_apple.17 file_apple.2  file_apple.22 file_apple.25 file_apple.28 file_apple.30 file_apple.6  file_apple.9
+Rajats-MacBook-Pro:fruit rohanrajat$ chmod 000 *2* 
+Rajats-MacBook-Pro:fruit rohanrajat$ ls
+file_apple.1  file_apple.12 file_apple.15 file_apple.18 file_apple.20 file_apple.23 file_apple.26 file_apple.29 file_apple.4  file_apple.7
+file_apple.10 file_apple.13 file_apple.16 file_apple.19 file_apple.21 file_apple.24 file_apple.27 file_apple.3  file_apple.5  file_apple.8
+file_apple.11 file_apple.14 file_apple.17 file_apple.2  file_apple.22 file_apple.25 file_apple.28 file_apple.30 file_apple.6  file_apple.9
+Rajats-MacBook-Pro:fruit rohanrajat$ ll
+total 0
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.9
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.8
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.7
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.6
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.5
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.4
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.30
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.3
+----------  1 rohanrajat  staff  0 May 21 01:01 file_apple.29
+----------  1 rohanrajat  staff  0 May 21 01:01 file_apple.28
+----------  1 rohanrajat  staff  0 May 21 01:01 file_apple.27
+----------  1 rohanrajat  staff  0 May 21 01:01 file_apple.26
+----------  1 rohanrajat  staff  0 May 21 01:01 file_apple.25
+----------  1 rohanrajat  staff  0 May 21 01:01 file_apple.24
+----------  1 rohanrajat  staff  0 May 21 01:01 file_apple.23
+----------  1 rohanrajat  staff  0 May 21 01:01 file_apple.22
+----------  1 rohanrajat  staff  0 May 21 01:01 file_apple.21
+----------  1 rohanrajat  staff  0 May 21 01:01 file_apple.20
+----------  1 rohanrajat  staff  0 May 21 01:01 file_apple.2
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.19
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.18
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.17
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.16
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.15
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.14
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.13
+----------  1 rohanrajat  staff  0 May 21 01:01 file_apple.12
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.11
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.10
+-rw-r--r--  1 rohanrajat  staff  0 May 21 01:01 file_apple.1
+Rajats-MacBook-Pro:fruit rohanrajat$ ls ..
+auth.log     challenges   failures.txt fruit        otherfolder  pets         success.txt  trees
+Rajats-MacBook-Pro:fruit rohanrajat$ cp -v * ../otherfolder/ &> logs.txt
+Rajats-MacBook-Pro:fruit rohanrajat$ vim logs.txt 
+Rajats-MacBook-Pro:fruit rohanrajat$ cat logs.txt 
+cp: file_apple.12: Permission denied
+cp: file_apple.2: Permission denied
+cp: file_apple.20: Permission denied
+cp: file_apple.21: Permission denied
+cp: file_apple.22: Permission denied
+cp: file_apple.23: Permission denied
+cp: file_apple.24: Permission denied
+cp: file_apple.25: Permission denied
+cp: file_apple.26: Permission denied
+cp: file_apple.27: Permission denied
+cp: file_apple.28: Permission denied
+cp: file_apple.29: Permission denied
+file_apple.1 -> ../otherfolder/file_apple.1
+file_apple.10 -> ../otherfolder/file_apple.10
+file_apple.11 -> ../otherfolder/file_apple.11
+file_apple.13 -> ../otherfolder/file_apple.13
+file_apple.14 -> ../otherfolder/file_apple.14
+file_apple.15 -> ../otherfolder/file_apple.15
+file_apple.16 -> ../otherfolder/file_apple.16
+file_apple.17 -> ../otherfolder/file_apple.17
+file_apple.18 -> ../otherfolder/file_apple.18
+file_apple.19 -> ../otherfolder/file_apple.19
+file_apple.3 -> ../otherfolder/file_apple.3
+file_apple.30 -> ../otherfolder/file_apple.30
+file_apple.4 -> ../otherfolder/file_apple.4
+file_apple.5 -> ../otherfolder/file_apple.5
+file_apple.6 -> ../otherfolder/file_apple.6
+file_apple.7 -> ../otherfolder/file_apple.7
+file_apple.8 -> ../otherfolder/file_apple.8
+file_apple.9 -> ../otherfolder/file_apple.9
+Rajats-MacBook-Pro:fruit rohanrajat$ 
+

@@ -1,0 +1,30 @@
+cp: file_apple.12: Permission denied
+cp: file_apple.2: Permission denied
+cp: file_apple.20: Permission denied
+cp: file_apple.21: Permission denied
+cp: file_apple.22: Permission denied
+cp: file_apple.23: Permission denied
+cp: file_apple.24: Permission denied
+cp: file_apple.25: Permission denied
+cp: file_apple.26: Permission denied
+cp: file_apple.27: Permission denied
+cp: file_apple.28: Permission denied
+cp: file_apple.29: Permission denied
+file_apple.1 -> ../otherfolder/file_apple.1
+file_apple.10 -> ../otherfolder/file_apple.10
+file_apple.11 -> ../otherfolder/file_apple.11
+file_apple.13 -> ../otherfolder/file_apple.13
+file_apple.14 -> ../otherfolder/file_apple.14
+file_apple.15 -> ../otherfolder/file_apple.15
+file_apple.16 -> ../otherfolder/file_apple.16
+file_apple.17 -> ../otherfolder/file_apple.17
+file_apple.18 -> ../otherfolder/file_apple.18
+file_apple.19 -> ../otherfolder/file_apple.19
+file_apple.3 -> ../otherfolder/file_apple.3
+file_apple.30 -> ../otherfolder/file_apple.30
+file_apple.4 -> ../otherfolder/file_apple.4
+file_apple.5 -> ../otherfolder/file_apple.5
+file_apple.6 -> ../otherfolder/file_apple.6
+file_apple.7 -> ../otherfolder/file_apple.7
+file_apple.8 -> ../otherfolder/file_apple.8
+file_apple.9 -> ../otherfolder/file_apple.9
