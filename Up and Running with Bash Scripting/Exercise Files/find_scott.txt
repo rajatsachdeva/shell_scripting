@@ -1,0 +1,62 @@
+Oct 14 19:38:34 localhost useradd[758]: new group: name=scott, GID=1000
+Oct 14 19:38:34 localhost useradd[758]: new user: name=scott, UID=1000, GID=1000, home=/home/scott, shell=/bin/sh
+Oct 14 19:38:55 localhost passwd[764]: pam_unix(passwd:chauthtok): password changed for scott
+Oct 14 19:38:58 localhost su[765]: Successful su for scott by root
+Oct 14 19:38:58 localhost su[765]: + /dev/pts/0 root:scott
+Oct 14 19:38:58 localhost su[765]: pam_unix(su:session): session opened for user scott by root(uid=0)
+Oct 14 19:40:02 localhost su[765]: pam_unix(su:session): session closed for user scott
+Oct 14 19:40:09 localhost sudo:     root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/sbin/usermod -a -G sudo scott
+Oct 14 19:40:09 localhost usermod[772]: add 'scott' to group 'sudo'
+Oct 14 19:40:09 localhost usermod[772]: add 'scott' to shadow group 'sudo'
+Oct 14 19:40:41 localhost sudo:     root : TTY=pts/0 ; PWD=/root ; USER=root ; COMMAND=/usr/sbin/useradd -D --base-dir /home/scott
+Oct 14 19:40:41 localhost useradd[778]: useradd defaults: GROUP=100, HOME=/home/scott, SHELL=/bin/sh, INACTIVE=-1, EXPIRE=, SKEL=/etc/skel, CREATE_MAIL_SPOOL=no
+Oct 14 19:41:35 localhost su[796]: Successful su for scott by root
+Oct 14 19:41:35 localhost su[796]: + /dev/pts/0 root:scott
+Oct 14 19:41:35 localhost su[796]: pam_unix(su:session): session opened for user scott by root(uid=0)
+Oct 14 19:41:43 localhost chsh[798]: changed user 'scott' shell to '/bin/bash'
+Oct 14 19:41:45 localhost su[796]: pam_unix(su:session): session closed for user scott
+Oct 14 19:41:46 localhost su[802]: Successful su for scott by root
+Oct 14 19:41:46 localhost su[802]: + /dev/pts/0 root:scott
+Oct 14 19:41:46 localhost su[802]: pam_unix(su:session): session opened for user scott by root(uid=0)
+Oct 14 19:42:04 localhost su[802]: pam_unix(su:session): session closed for user scott
+Oct 14 19:42:29 localhost su[811]: Successful su for scott by root
+Oct 14 19:42:29 localhost su[811]: + /dev/pts/0 root:scott
+Oct 14 19:42:29 localhost su[811]: pam_unix(su:session): session opened for user scott by root(uid=0)
+Oct 14 19:47:40 localhost su[811]: pam_unix(su:session): session closed for user scott
+Oct 14 19:47:46 localhost sshd[818]: Accepted password for scott from 172.20.1.8 port 22397 ssh2
+Oct 14 19:47:46 localhost sshd[818]: pam_unix(sshd:session): session opened for user scott by (uid=0)
+Oct 14 19:49:51 localhost sudo: pam_unix(sudo:auth): auth could not identify password for [scott]
+Oct 14 19:49:56 localhost sudo:    scott : TTY=pts/0 ; PWD=/home/scott ; USER=root ; COMMAND=/bin/cp -R * /root .
+Oct 14 19:49:56 localhost sudo: pam_unix(sudo:session): session opened for user root by scott(uid=1000)
+Oct 14 19:50:06 localhost sudo:    scott : TTY=pts/0 ; PWD=/home/scott ; USER=root ; COMMAND=/bin/cp -R /root/* .
+Oct 14 19:50:06 localhost sudo: pam_unix(sudo:session): session opened for user root by scott(uid=1000)
+Oct 14 19:50:48 localhost sudo:    scott : TTY=pts/0 ; PWD=/home/scott ; USER=root ; COMMAND=/bin/chmod 777 root
+Oct 14 19:50:48 localhost sudo: pam_unix(sudo:session): session opened for user root by scott(uid=1000)
+Oct 14 19:51:08 localhost sudo:    scott : TTY=pts/0 ; PWD=/home/scott/root ; USER=root ; COMMAND=/bin/chmod -R 777 fruit pets trees
+Oct 14 19:51:08 localhost sudo: pam_unix(sudo:session): session opened for user root by scott(uid=1000)
+Oct 14 19:51:33 localhost sudo:    scott : TTY=pts/0 ; PWD=/home/scott ; USER=root ; COMMAND=/bin/rm -rf root
+Oct 14 19:51:33 localhost sudo: pam_unix(sudo:session): session opened for user root by scott(uid=1000)
+Oct 14 20:00:03 localhost su[958]: Successful su for root by scott
+Oct 14 20:00:03 localhost su[958]: + /dev/pts/0 scott:root
+Oct 14 20:00:03 localhost su[958]: pam_unix(su:session): session opened for user root by scott(uid=1000)
+Oct 14 20:02:45 localhost sshd[818]: pam_unix(sshd:session): session closed for user scott
+Oct 14 20:03:20 localhost su[1073]: Successful su for scott by root
+Oct 14 20:03:20 localhost su[1073]: + /dev/pts/0 root:scott
+Oct 14 20:03:20 localhost su[1073]: pam_unix(su:session): session opened for user scott by root(uid=0)
+Oct 14 20:18:59 localhost sudo:    scott : TTY=pts/0 ; PWD=/home/scott ; USER=root ; COMMAND=/bin/cp example.txt /usr/bin
+Oct 14 20:19:21 localhost sudo:    scott : TTY=pts/0 ; PWD=/home/scott ; USER=root ; COMMAND=/bin/rm /usr/bin/example.txt
+Oct 14 20:25:54 localhost su[1073]: pam_unix(su:session): session closed for user scott
+Oct 14 21:12:33 localhost sshd[1163]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.20.1.8  user=scott
+Oct 14 21:12:36 localhost sshd[1163]: Failed password for scott from 172.20.1.8 port 28505 ssh2
+Oct 14 21:12:41 localhost sshd[1163]: Accepted password for scott from 172.20.1.8 port 28505 ssh2
+Oct 14 21:12:41 localhost sshd[1163]: pam_unix(sshd:session): session opened for user scott by (uid=0)
+Oct 15 00:56:51 localhost sshd[1163]: pam_unix(sshd:session): session closed for user scott
+Oct 15 17:12:18 localhost sshd[2935]: Accepted password for scott from 172.20.1.8 port 12423 ssh2
+Oct 15 17:12:18 localhost sshd[2935]: pam_unix(sshd:session): session opened for user scott by (uid=0)
+Oct 15 17:32:34 localhost sshd[3044]: Accepted password for scott from 172.20.1.8 port 58785 ssh2
+Oct 15 17:32:34 localhost sshd[3044]: pam_unix(sshd:session): session opened for user scott by (uid=0)
+Oct 15 17:54:44 localhost sshd[2935]: pam_unix(sshd:session): session closed for user scott
+Oct 15 19:39:01 localhost sshd[4230]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.20.1.8  user=scott
+Oct 15 19:39:03 localhost sshd[4230]: Failed password for scott from 172.20.1.8 port 29496 ssh2
+Oct 15 19:39:06 localhost sshd[4230]: Accepted password for scott from 172.20.1.8 port 29496 ssh2
+Oct 15 19:39:06 localhost sshd[4230]: pam_unix(sshd:session): session opened for user scott by (uid=0)

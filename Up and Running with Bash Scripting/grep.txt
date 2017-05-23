@@ -1,0 +1,9 @@
+Rajats-MacBook-Pro:Exercise Files rohanrajat$ grep scott auth.log > find_scott.txt
+Rajats-MacBook-Pro:Exercise Files rohanrajat$ vim find_scott.txt 
+Rajats-MacBook-Pro:Exercise Files rohanrajat$ grep -i break-in auth.log > break-in.txt
+Rajats-MacBook-Pro:Exercise Files rohanrajat$ vim break-in.txt 
+
+# Following command selects the 12th element of each output of grep command
+# -i is used for case insensitive 
+Rajats-MacBook-Pro:Exercise Files rohanrajat$ grep -i break-in auth.log | awk {'print $12'} > awk-break-in.txt
+Rajats-MacBook-Pro:Exercise Files rohanrajat$ vim awk-break-in.txt 
