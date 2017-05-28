@@ -38,3 +38,18 @@ echo -e "\033[32;40mGreen on Black\033[0m"
 echo -e "\033[31;47mRed on white\033[0m"
 
 echo -e "\033[34;43mBlue on Yellow\033[0m"
+
+# Styled Text [ANSI]
+# Style				Value
+# No Style			0
+# Bold				1
+# Low intenisty		2
+# Underline			4
+# Blinking			5
+# Reverse			7
+# invisible			8
+
+# Styling example
+# How to make text blink
+echo -e "\033[5;31;40mERROR: \033[0m\033[31;40mSomething went wrong\033[0m"
+
