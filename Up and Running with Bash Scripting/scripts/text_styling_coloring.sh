@@ -53,3 +53,39 @@ echo -e "\033[34;43mBlue on Yellow\033[0m"
 # How to make text blink
 echo -e "\033[5;31;40mERROR: \033[0m\033[31;40mSomething went wrong\033[0m"
 
+# Make this expression better to use
+blinkred="\033[5;31;47m"
+red="\033[31;37m"
+none="\033[0m"
+echo -e $blinkred"ERROR: "$none$red"Something went wrong"$none
+
+# Utility tput for styled text
+# Style				Command
+# Foreground		tput setaf[0-7]
+# Background		tput setab[0-7]
+# No Style			tput sgr0
+# Bold				tput bold
+# Low Intensity		tput dim
+# Underline			tput smul
+# Blinking			tput blink
+# Reverse			tput rev
+
+# Colored text [ANSI] 
+# Color		setaf			setab
+# Black		0				0
+# Red		1				1
+# Green		2				2
+# Yellow	3				3
+# Blue		4				4
+# Magenta	5				5
+# Cyan		6				6
+# White		7				7
+
+# Make this expression better to use
+blinkred=$(tput setaf 1; tput setab 7; tput blink)
+red=$(tput setaf 1; tput setab 7)
+none=$(tput sgr0)
+echo -e $blinkred"ERROR: "$none$red"Something went wrong"$none
+
+
+
