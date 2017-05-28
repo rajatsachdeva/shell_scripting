@@ -87,5 +87,4 @@ red=$(tput setaf 1; tput setab 7)
 none=$(tput sgr0)
 echo -e $blinkred"ERROR: "$none$red"Something went wrong"$none
 
-
-
+# use can use man terminfo to get more info 
