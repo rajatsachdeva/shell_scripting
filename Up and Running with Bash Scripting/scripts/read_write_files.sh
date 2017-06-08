@@ -30,3 +30,9 @@ while read f; do
 	echo "Line $i: $f"
 	((i+=1))
 done < file.txt 
+
+# Another way to print the file contents, by using the file as an argument
+echo 
+cat < file.txt
+
+ftp -n < ftp.txt
