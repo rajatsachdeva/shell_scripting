@@ -22,3 +22,11 @@ cat file.txt
 echo "Some more text" >> file.txt
 echo
 cat file.txt
+
+# Reading file
+echo -e "\nReading the file \"file.txt\""
+i=1
+while read f; do
+	echo "Line $i: $f"
+	((i+=1))
+done < file.txt 
