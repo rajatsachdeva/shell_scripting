@@ -23,6 +23,7 @@ echo ${b[@] : -1}
 # Associative Arrays
 # key and values
 # if your key/value has a space in it use quotes ""
+# For bash 4 and above
 declare -A myarray 
 myarray[color]=blue
 myarray["office building"]="HQ West"
