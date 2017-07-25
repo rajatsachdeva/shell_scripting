@@ -1,0 +1,15 @@
+Some of the Usefull commands
+1. cd - 
+	This command open the previous opened directory 
+
+2, vim `!!`
+	here !! is gives last executed command
+	and ` ` helps in executing the last command 
+
+3. find . -name 'Filename'
+	finds the files with name as 'Filename' in current directory
+
+4. find . -name 'Filename' | xargs grep 'phrase'
+	finds all the occurrences of the phrase in the files with name as 'Filename' 
+5. find . name 'Filename' | xargs grep 'phrase' -ll
+	gives the unique file name containing the phrase
