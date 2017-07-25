@@ -11,5 +11,6 @@ Some of the Usefull commands
 
 4. find . -name 'Filename' | xargs grep 'phrase'
 	finds all the occurrences of the phrase in the files with name as 'Filename' 
+
 5. find . name 'Filename' | xargs grep 'phrase' -ll
 	gives the unique file name containing the phrase
