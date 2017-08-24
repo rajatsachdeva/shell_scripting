@@ -14,3 +14,9 @@ Some of the Usefull commands
 
 5. find . name 'Filename' | xargs grep 'phrase' -ll
 	gives the unique file name containing the phrase
+
+6.  old="search_string"
+	new="replace_string"
+	sed "s%$old%$new%g" < inputfilename > outputfilename
+
+	Above searches and replaces the old with new string even if the string contains '/'
