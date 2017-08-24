@@ -1,0 +1,22 @@
+Last login: Thu Aug 24 14:16:21 on console
+[Thu Aug 24 17:23:50 Rajat]:~>echo "my name is rajat" > temp.txt
+[Thu Aug 24 17:24:07 Rajat]:~>echo "my name is r////ajat" > temp.txt
+[Thu Aug 24 17:25:25 Rajat]:~>sed s/"r////ajat"/rajat < temp.txt > temp_new.txt
+sed: 1: "s/r////ajat/rajat": bad flag in substitute command: '/'
+[Thu Aug 24 17:26:01 Rajat]:~>sed "s/"r////ajat"%"rajat"%g" < temp.txt > temp_new.txt
+sed: 1: "s/r////ajat%rajat%g": bad flag in substitute command: '/'
+[Thu Aug 24 17:38:36 Rajat]:~>sed "s%"r////ajat"%"rajat"%g" < temp.txt > temp_new.txt
+[Thu Aug 24 17:38:43 Rajat]:~>cat temp_new.txt 
+my name is rajat
+[Thu Aug 24 17:38:53 Rajat]:~>
+
+
+
+
+
+
+
+
+
+
+
