@@ -10,13 +10,35 @@ sed: 1: "s/r////ajat%rajat%g": bad flag in substitute command: '/'
 my name is rajat
 [Thu Aug 24 17:38:53 Rajat]:~>
 
+How to in place replace a string in a file ?
+Here we are replacing REPLACESTR to NEWSTR
 
+-i option is used to in place edit the input file 
 
+export NEWSTR="_Source Code_"
+export REPLACESTR="Source Code"
 
+sed -i -e  "s%$REPLACESTR%$NEWSTR%g" README.md 
 
+[Thu Dec 28 23:56:41 Rajat]:4-Variables_Datatypes_and_Operators>cat README.md
+# [Udemy] Section 4: Variables, Datatypes and Operators
 
+__Lectures__: *15-22*
 
+15. Introduction
+16. What are Variables ?
+>   [_Source Code_](16-What_Are_Variables/src)
+17. Getting To Know Primitive Data Types - The Byte, Short, Int And Long
+>   [_Source Code_](17-Getting_To_Know-Primitive_Data_Types_whole_numbers/src/com/company)
+18. Getting To Know Primitive Data Types - Float And Double
+>   [_Source Code_](18-Getting_To_Know_Primitive_Data_Types_Float_And_Double/src/com/rajatsachdeva)
+19. Getting To Know Primitive Data Types - Char And Boolean
+>   [_Source Code_](19-Getting_To_Know_Primitive_Data_Types_Char_And_Boolean/src/com/rajatsachdeva)
+20. Understanding Strings And Finishing Up Primitive Data Types
+>   [_Source Code_](20-Understanding_Strings_And_Finishing_Up_Primitive_Data_Types/src/com/rajatsachdeva)
+21. Operators In Java
+22. More On Operators And Operator Precedence
+>   [_Source Code_](21-22-Operators_In_Java/src/com/rajatsachdeva)
+[Thu Dec 28 23:56:44 Rajat]:4-Variables_Datatypes_and_Operators>
 
-
-
-
+How to in place replace a string in multiple files ?
