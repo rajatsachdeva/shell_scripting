@@ -42,3 +42,14 @@ __Lectures__: *15-22*
 [Thu Dec 28 23:56:44 Rajat]:4-Variables_Datatypes_and_Operators>
 
 How to in place replace a string in multiple files ?
+
+Linux: grep -r -l <old> * | xargs sed -i 's/<old>/<new>/g'
+OS X: grep -r -l <old> * | xargs sed -i '' 's/<old>/<new>/g'
+
+For grep:
+    -r recursively searches subdirectories 
+    -l prints file names that contain matches
+For sed:
+    -i extension (Note: An argument needs to be provided on OS X)
+
+find . -type f -name 'xa*' | xargs sed -i 's/asd/dsg/g'
