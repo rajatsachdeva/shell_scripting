@@ -1,0 +1,106 @@
+[Tue Jan 02 22:21:55 Rajat]:13-Java_Collections>echo 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 | xargs -n 1 cp 99-Collections_Overview/README.md 
+[Tue Jan 02 22:24:16 Rajat]:13-Java_Collections>tree
+.
+├── 100-Binary_Search
+│   ├── README.md
+│   └── Resources
+│       ├── Collections.iml
+│       ├── out
+│       │   └── production
+│       │       └── Collections
+│       │           └── com
+│       │               └── timbuchalka
+│       │                   ├── Main.class
+│       │                   ├── Theatre$Seat.class
+│       │                   └── Theatre.class
+│       └── src
+│           └── com
+│               └── timbuchalka
+│                   ├── Main.java
+│                   └── Theatre.java
+├── 101-Collections_List_Methods
+│   ├── README.md
+│   └── Resources
+│       ├── Collections.iml
+│       ├── out
+│       │   └── production
+│       │       └── Collections
+│       │           └── com
+│       │               └── timbuchalka
+│       │                   ├── Main.class
+│       │                   ├── Theatre$Seat.class
+│       │                   └── Theatre.class
+│       └── src
+│           └── com
+│               └── timbuchalka
+│                   ├── Main.java
+│                   └── Theatre.java
+├── 102-
+├── 103-
+├── 104
+│   └── README.md
+├── 105
+│   └── README.md
+├── 106
+│   └── README.md
+├── 107
+│   └── README.md
+├── 108
+│   └── README.md
+├── 109
+│   └── README.md
+├── 110
+│   └── README.md
+├── 111
+│   └── README.md
+├── 112
+│   └── README.md
+├── 113
+│   └── README.md
+├── 114
+│   └── README.md
+├── 115
+│   └── README.md
+├── 116
+│   └── README.md
+├── 117
+│   └── README.md
+├── 118
+│   └── README.md
+├── 119
+│   └── README.md
+├── 120
+│   └── README.md
+├── 121
+│   └── README.md
+├── 122
+│   └── README.md
+├── 123
+│   └── README.md
+├── 124
+│   └── README.md
+├── 125
+│   └── README.md
+├── 99-Collections_Overview
+│   ├── README.md
+│   └── Resources
+│       ├── Collections.iml
+│       ├── out
+│       │   └── production
+│       │       └── Collections
+│       │           └── com
+│       │               └── timbuchalka
+│       │                   ├── Main.class
+│       │                   ├── Theatre$Seat.class
+│       │                   └── Theatre.class
+│       └── src
+│           └── com
+│               └── timbuchalka
+│                   ├── Main.java
+│                   └── Theatre.java
+└── README.md
+
+54 directories, 44 files
+[Tue Jan 02 22:24:21 Rajat]:13-Java_Collections>echo 
+
+
