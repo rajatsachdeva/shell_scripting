@@ -1,0 +1,2 @@
+https://developer.apple.com/library/mac/documentation/OpenSource/Conceptual/ShellScripting/Introduction/Introduction.html
+http://www.tldp.org/LDP/abs/html/

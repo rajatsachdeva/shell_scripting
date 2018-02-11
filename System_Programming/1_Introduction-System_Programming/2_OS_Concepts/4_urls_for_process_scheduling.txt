@@ -1,0 +1,2 @@
+https://en.wikipedia.org/wiki/Scheduling_(computing)
+https://www.cs.rutgers.edu/~pxk/416/notes/07-scheduling.html

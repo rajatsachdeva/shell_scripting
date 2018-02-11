@@ -1,0 +1,3 @@
+https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-2
+http://www.grymoire.com/Unix/Permissions.html
+http://www.yolinux.com/TUTORIALS/LibraryArchives-StaticAndDynamic.html
