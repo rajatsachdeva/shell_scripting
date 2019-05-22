@@ -1,0 +1,10 @@
+[Thu May 23 00:45:55 Rajat]:scripts>touch apachescript
+[Thu May 23 00:46:24 Rajat]:scripts>ls -ltr
+total 8
+-rwxrwxrwx  1 rohanrajat  staff  21 May 23 00:12 helloworld.bash
+-rw-r--r--  1 rohanrajat  staff   0 May 23 00:46 apachescript
+[Thu May 23 00:46:30 Rajat]:scripts>chmod a+x apachescript 
+[Thu May 23 00:46:52 Rajat]:scripts>ll 
+total 8
+-rwxrwxrwx  1 rohanrajat  staff  21 May 23 00:12 helloworld.bash
+-rwxr-xr-x  1 rohanrajat  staff   0 May 23 00:46 apachescript
