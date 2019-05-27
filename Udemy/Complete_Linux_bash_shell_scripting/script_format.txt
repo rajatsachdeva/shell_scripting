@@ -1,0 +1,12 @@
+SCRIPT FORMAT
+-------------
+
+- Define Shell (#!/bin/bash)
+
+- Comments (# comments)
+
+- Define variables (e.g name=abc)
+
+- Commands (echo, cp, grep, etc.)
+
+- Statements (if, while, for etc.)

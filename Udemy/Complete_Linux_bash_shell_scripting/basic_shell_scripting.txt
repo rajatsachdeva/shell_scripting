@@ -1,0 +1,13 @@
+Basic Shell Scripting 
+---------------------
+
+- First script
+- Run Basic Tasks
+- Run Basic Administration Tasks
+- Defining Variables 
+- Input=Output
+- Conditions/If else statements
+- Case Statements
+- For loop script
+- do-while 
+- Getting online help

@@ -1,0 +1,14 @@
+Script Sequence
+---------------
+
+Command 1
+Command 2
+Command 3 ...
+
+It will be executed in the order the commands are written
+in the script in a sequence, in a top down fashion. 
+
+e.g. 
+ls
+date
+df -h
