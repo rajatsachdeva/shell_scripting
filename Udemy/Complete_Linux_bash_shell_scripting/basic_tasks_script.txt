@@ -1,0 +1,11 @@
+Basic Tasks Script
+------------------
+
+Create second script to run basic tasks
+
+pwd 
+ls 
+whoami
+date
+cal
+touch a b c
