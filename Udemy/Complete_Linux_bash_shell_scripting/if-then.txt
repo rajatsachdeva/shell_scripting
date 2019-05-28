@@ -1,0 +1,11 @@
+If-then Scripts
+---------------
+
+In everyday example: 
+
+- "If" I win the lotto "then" I will buy you a car
+- "If" I get off early from work "then" we can got to a concert
+
+If then statement
+    if this happens 
+    Otherwise
