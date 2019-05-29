@@ -1,0 +1,11 @@
+Case Statement Scripts
+----------------------
+
+Case 
+
+- If option a is selected = do this
+- If option b is selected = do this
+- If option c is selected = do this
+
+Most of the installation programs are written in case statements
+where the scripts waits for user input to select from choices
