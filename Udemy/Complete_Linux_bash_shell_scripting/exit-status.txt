@@ -1,0 +1,16 @@
+Exit Status
+-----------
+
+Every time a command is ran in Linux/shell, it will always have some exit status.
+
+0 = OK or Successful
+1 = Minor problem 
+2 = Serious trouble 
+3-255 = Everything else
+
+0 to 255 (actual error codes present in Linux)
+
+To get the exit status for any last command ran, 
+
+echo $? 
+
