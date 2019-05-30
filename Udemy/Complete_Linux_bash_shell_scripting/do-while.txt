@@ -1,0 +1,20 @@
+do-while
+--------
+
+do while 
+
+ - The while statement continually executes a block of statements while a particular condition is true or met
+
+ e.g: Run a script until 2 pm
+      daemon scripts (that run in background) uses do-while 
+
+Syntax: 
+
+while [ condition ]
+    do 
+        command 1
+        command 2
+        command 3
+        .
+        command N
+    done
