@@ -1,0 +1,13 @@
+awk usage
+---------
+
+Prints the first column from the output of the script 
+
+./admin-commands.bash | awk '{print $1}'
+Sat
+1:06
+Filesystem
+/dev/disk1s1
+End
+
+
