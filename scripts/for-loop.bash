@@ -20,4 +20,32 @@ for i in eat run jump play
 
 echo
 
+# for loop to create 5 files named 1-5
+for i in {1..5}
+do
+    touch $i
+    echo created file $i
+done
+echo
+ls -ltr
+echo
+
+# for loop to delete 5 files name 1-5
+for i in {1..5}
+do
+    rm -f $i
+    echo deleted file $i
+done
+echo
+ls -ltr
+echo
+
+# Specify days in loop
+
+i=1
+for day in Mon Tue Wed Thu Fri Sat Sun
+do
+    echo "Weekday $((i++)) : $day"
+done
+echo
 echo End of Script
