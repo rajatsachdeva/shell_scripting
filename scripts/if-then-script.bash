@@ -22,3 +22,43 @@ else
     echo File does not exist
 fi
 echo
+
+# Check if a variable value is met
+
+a=`date | awk '{print $1}'`
+
+if [ "$a" == Mon ]
+    then
+        echo Today is $a
+    else
+        echo Today is not Monday
+fi
+
+echo
+
+# Check the response and then output
+
+echo "What is your name ?"
+echo 
+read name
+echo 
+
+echo Hello $name
+echo
+
+echo "Do you like working in IT ? (y/n)"
+read like
+echo
+
+if [ "$like" == y ]
+    then
+        echo You are cool
+elif [ "$like" == n ]
+    then 
+        echo "You should try IT, it's a good field"
+else 
+    echo Wrong Option
+fi
+echo
+
+echo End of Script
