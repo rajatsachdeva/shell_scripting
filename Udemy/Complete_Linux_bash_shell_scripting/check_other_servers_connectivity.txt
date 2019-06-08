@@ -1,0 +1,6 @@
+Check Other Servers Connectivity
+--------------------------------
+
+A Script to check the status of remote hosts 
+
+
