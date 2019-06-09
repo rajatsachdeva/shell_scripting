@@ -1,0 +1,7 @@
+[Mon Jun 10 00:22:30 Rajat]:professional-scripts>crontab -l 
+24 00 * * * /Users/rohanrajat/Documents/Bash_Scripting/shell_scripting/professional-scripts/ping-script-all.bash > /Users/rohanrajat/Documents/Bash_Scripting/shell_scripting/professional-scripts/ping_output
+[Mon Jun 10 00:23:32 Rajat]:professional-scripts>crontab -r
+[Mon Jun 10 00:23:42 Rajat]:professional-scripts>crontab -l 
+crontab: no crontab for rohanrajat
+
+crontrab -e 

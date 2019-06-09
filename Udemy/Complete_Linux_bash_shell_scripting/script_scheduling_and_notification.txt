@@ -1,0 +1,10 @@
+Script Schedules and Notification
+---------------------------------
+
+- Schedule script through cron job
+- Notification through email/sendmail 
+
+What Is a Cron Job? cron is a Linux utility which schedules a command or script on your server to run automatically at a specified time and date. A cron job is the scheduled task itself. Cron jobs can be very useful to automate repetitive tasks.
+
+
+
