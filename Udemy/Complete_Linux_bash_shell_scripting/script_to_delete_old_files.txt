@@ -1,0 +1,14 @@
+Script to Delete Old Files
+--------------------------
+
+- Create script to delete files as specified
+- Create files with older time-stamp
+- Find and delete files older than 90 days
+- Find and rename old files
+
+Create Files with OLD time-stamps
+touch -d "Thu, 1, March 2018 12:30:00" a
+
+In Mac
+touch -t 1803011230.00 b
+
