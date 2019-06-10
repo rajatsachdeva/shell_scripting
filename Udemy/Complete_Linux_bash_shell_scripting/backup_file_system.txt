@@ -5,3 +5,7 @@ Script to Backup File System
  (these are two most important directories in linux system environment)
  /etc : used to store the configuration 
  /var : used to store the system logging and stuff 
+
+- Compress the backup .tar file using gzip command
+
+- write a script to automate backups
