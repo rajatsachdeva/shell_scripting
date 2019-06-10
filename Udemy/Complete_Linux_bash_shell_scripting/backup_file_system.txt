@@ -1,0 +1,7 @@
+Script to Backup File System
+----------------------------
+
+- Create backup of /etc and /var directories using tar command 
+ (these are two most important directories in linux system environment)
+ /etc : used to store the configuration 
+ /var : used to store the system logging and stuff 
