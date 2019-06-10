@@ -12,3 +12,9 @@ touch -d "Thu, 1, March 2018 12:30:00" a
 In Mac
 touch -t 1803011230.00 b
 
+[Mon Jun 10 22:43:56 Rajat]:professional-scripts>find . -mtime +90 -exec ls -l {} \;
+-rw-r--r--  1 rohanrajat  staff  0 Mar  1  2018 ./a
+-rw-r--r--  1 rohanrajat  staff  0 Mar  1  2018 ./c
+-rw-r--r--  1 rohanrajat  staff  0 Mar  1  2018 ./d
+-rw-r--r--  1 rohanrajat  staff  0 Mar  1  2018 ./b
+
