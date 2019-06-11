@@ -1,0 +1,9 @@
+For Loops Scripts for File System 1
+-----------------------------------
+
+Multiple Scripts
+ - Simple counting 
+ - Create multiple files with different name
+ - Create multiple files with user input 
+ - Assign write permissions to files
+ - Assign write permission to files with total time it will take
