@@ -9,3 +9,33 @@ Script to Backup File System
 - Compress the backup .tar file using gzip command
 
 - write a script to automate backups
+
+
+tar cvf test_backup.tar test-backup-dir/
+a test-backup-dir
+a test-backup-dir/a
+a test-backup-dir/f
+a test-backup-dir/c
+a test-backup-dir/d
+a test-backup-dir/e
+a test-backup-dir/b
+
+-rw-r--r--  1 rohanrajat  staff  4608 Jun 11 23:31 test_backup.tar
+
+To only view the contents of a tar file 
+
+tar xvf test_backup.tar
+x test-backup-dir/
+x test-backup-dir/a
+x test-backup-dir/f
+x test-backup-dir/c
+x test-backup-dir/d
+x test-backup-dir/e
+x test-backup-dir/b
+
+Compress the tar file to reduce the size (size reduced from 4608 to 217)
+
+professional-scripts>gzip test_backup.tar
+
+-rw-r--r--  1 rohanrajat  staff  217 Jun 11 23:31 test_backup.tar.gz
+
