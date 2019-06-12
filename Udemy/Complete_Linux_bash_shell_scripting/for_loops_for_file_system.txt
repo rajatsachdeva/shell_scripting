@@ -1,5 +1,5 @@
-For Loops Scripts for File System 1
------------------------------------
+For Loops Scripts for File System 1 & 2
+---------------------------------------
 
 Multiple Scripts
  - Simple counting 
@@ -7,3 +7,5 @@ Multiple Scripts
  - Create multiple files with user input 
  - Assign write permissions to files
  - Assign write permission to files with total time it will take
+ - Rename all *.txt files extension to .none
+ - Check to see if files exist
