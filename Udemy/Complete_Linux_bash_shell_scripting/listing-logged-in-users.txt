@@ -1,0 +1,7 @@
+Listing of Logged in Users
+--------------------------
+
+- Script to look for users logged in today
+- Script to ask for user input to pull user
+
+we will use the 'last' command to get this information
