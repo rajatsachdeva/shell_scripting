@@ -5,3 +5,6 @@ Listing of Logged in Users
 - Script to ask for user input to pull user
 
 we will use the 'last' command to get this information
+
+when greping with multiple strings always use double quotes "" to treat them as a single string
+
