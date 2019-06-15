@@ -16,4 +16,19 @@ Rajats-MacBook-Pro-3:professional-scripts root# nohup ./log-tail.bash  &
 [1] 1099
 Rajats-MacBook-Pro-3:professional-scripts root# appending output to nohup.out
 
+In MacOS logging has been changed from file based system to memory based system.
+[Sun Jun 16 00:04:22 Rajat]:professional-scripts>logger -is -t LogTest "Message4Me"
+Jun 16 00:04:58  LogTest[1209] <Notice>: Message4Me
+[Sun Jun 16 00:04:58 Rajat]:professional-scripts>log show --predicate 'eventMessage contains "Message4Me"' --last 3m
+Filtering the log data using "composedMessage CONTAINS "Message4Me""
+Skipping info and debug messages, pass --info and/or --debug to include.
+Timestamp                       Thread     Type        Activity             PID    TTL
+2019-06-16 00:04:58.284050+0530 0xed93     Default     0x0                  1209   0    logger: Message4Me
+--------------------------------------------------------------------------------------------------------------------
+Log      - Default:          1, Info:                0, Debug:             0, Error:          0, Fault:          0
+Activity - Create:           0, Transition:          0, Actions:           0
+[Sun Jun 16 00:05:07 Rajat]:professional-scripts>
+
+
+
 
