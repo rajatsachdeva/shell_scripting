@@ -1,0 +1,19 @@
+Central Logging
+---------------
+
+- Script to trace /var/log/messages or system.log (in macOS) file 
+- Run the script in the background
+- User /admin notification
+- Schedule the script through cronjob
+
+command to add into the log
+logger -t error "Message"
+
+run script in background
+nohup <script_path>
+
+Rajats-MacBook-Pro-3:professional-scripts root# nohup ./log-tail.bash  &
+[1] 1099
+Rajats-MacBook-Pro-3:professional-scripts root# appending output to nohup.out
+
+
