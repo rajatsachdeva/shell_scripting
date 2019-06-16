@@ -1,0 +1,8 @@
+User Account Management
+-----------------------
+
+- Create a user account
+- Error out if user exist
+- Add user description 
+- Add user ID option
+- Error out if user ID exist
