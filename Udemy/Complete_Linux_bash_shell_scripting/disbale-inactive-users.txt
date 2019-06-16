@@ -1,0 +1,6 @@
+Disable Inactive Users
+----------------------
+
+- Run commands to identify users
+- Create a script in For loop to disable inactive accounts
+- Create a script with xargs to disable inactive accounts
