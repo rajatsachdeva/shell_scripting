@@ -1,0 +1,10 @@
+Check Process Status and Kill it
+--------------------------------
+
+- How to kill zombie processes ? (processes that don't have any parent)
+- Create a dummy process
+- Run commands to find the process ID
+- Create a script to kill process
+
+ps -ef | grep "sleep 600" | grep -v grep | awk '{print $2}' | xargs -I{} echo {}
+ps -ef | grep "sleep 600" | grep -v grep | awk '{print $2}' | xargs -I{} kill {}
