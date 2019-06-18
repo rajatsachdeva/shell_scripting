@@ -1,0 +1,5 @@
+Disk Space Status Check
+-----------------------
+- Find disk space using df command
+- Different scripts that will filter the output and compare (long)
+- Simple script
