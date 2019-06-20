@@ -1,0 +1,8 @@
+Status of Total Number of Files (Send alert if files are less than 50)
+----------------------------------------------------------------------
+
+- Run the command "ls -l" with different option
+- Create a script to perform comparison
+- Schedule and notify
+
+touch file{1..20}.txt
