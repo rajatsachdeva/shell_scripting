@@ -20,3 +20,13 @@ Some of the Usefull commands
 	sed "s%$old%$new%g" < inputfilename > outputfilename
 
 	Above searches and replaces the old with new string even if the string contains '/'
+
+7. Creating soft-links
+[Thu Jun 20 00:42:26 Rajat]:test>find . -name "*.so" -exec ln -s {} {}.1 \;
+[Thu Jun 20 00:42:39 Rajat]:test>ll
+total 0
+-rw-r--r--  1 rohanrajat  staff   0 Jun 20 00:39 file.so
+-rw-r--r--  1 rohanrajat  staff   0 Jun 20 00:39 file2.so
+lrwxr-xr-x  1 rohanrajat  staff   9 Jun 20 00:42 file.so.1 -> ./file.so
+lrwxr-xr-x  1 rohanrajat  staff  10 Jun 20 00:42 file2.so.1 -> ./file2.so
+[Thu Jun 20 00:42:40 Rajat]:test>
