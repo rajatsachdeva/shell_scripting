@@ -1,0 +1,6 @@
+Create System Inventory - (Step by Step User Input)
+---------------------------------------------------
+
+- 1st script to add a record
+- 2nd script to delete a record
+- 3rd script to combine above 2 and provide options
