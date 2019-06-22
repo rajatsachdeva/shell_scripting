@@ -1,0 +1,14 @@
+Linux File Types
+----------------
+
+There are 7 different file types in Linux
+
+    File Symbol     Meaning
+    ===========     ======================
+        -           Regular File
+        d           Directory
+        l           link
+        c           Special file or device file
+        s           socket
+        p           Named pipe
+        b           Blocked device
