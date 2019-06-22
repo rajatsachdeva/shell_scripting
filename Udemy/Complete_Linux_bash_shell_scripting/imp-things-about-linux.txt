@@ -1,0 +1,8 @@
+Important Things to Remember About Linux
+----------------------------------------
+
+- Linux has super administrator account "root"
+- "root" is the most powerful account that can create, modify, delete accounts and make changes to system configuration
+files
+- Linux is case-sensitive system
+- Avoid using file names with spaces
