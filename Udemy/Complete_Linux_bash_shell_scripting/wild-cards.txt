@@ -1,0 +1,34 @@
+Wild Cards
+----------
+
+W* = Wildcard
+10,J,Q,W*,K = Flush
+8,8,8,W* = 4 of kind
+2,2,9,W* = Two Pair
+
+In Linux File Names:
+
+e.g. superheros1, superheros2...
+
+? - single character 
+* - multiple character
+
+Wildcards = *,?
+superheros*
+?uperheros*
+?*perheros*
+
+A wildcard is character that can be used as a substitute for any
+of a class of a class of characters in a search
+
+    * - represents zero or more characters
+    ? - represents a single character
+    [] - represents a range of characters
+
+Create multiple files using wildcards
+touch abcd{1..9}
+
+touch abcd{1..9}-xyx
+
+ls -ltr *[abcdxyz123456789]*.txt | more
+
