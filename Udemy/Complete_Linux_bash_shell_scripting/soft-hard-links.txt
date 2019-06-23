@@ -1,0 +1,140 @@
+Soft and Hand Links
+-------------------
+- inode = Pointer or number of a file on the hard disk
+- Soft Link = Link will be removed if file is removed or renamed
+- Hard Link = Deleting, renaming, or moving the original file will not affect the hard link
+
+Hard link
+    ln
+ Soft link
+    ln -s
+
+Hard link
+---------
+my-hard-link --------> inode (of file) 
+So, here we have direct link to the inode of the file
+
+Soft link
+---------
+my-soft-link ------> myfile.txt ---> inode
+we have direct link to file name but not to the inode of the file
+
+Link is basically a short cut in regular terms.
+
+Example:
+
+Soft link
+[Mon Jun 24 01:20:43 Rajat]:test>ll
+[Mon Jun 24 01:20:44 Rajat]:test>touch hulk
+[Mon Jun 24 01:20:47 Rajat]:test>ll
+total 0
+-rw-r--r--  1 rohanrajat  staff  0 Jun 24 01:20 hulk
+[Mon Jun 24 01:20:48 Rajat]:test>mkdir test-new
+[Mon Jun 24 01:21:12 Rajat]:test>cd test-new/
+
+[Mon Jun 24 01:21:37 Rajat]:test-new>ln -s ../hulk
+[Mon Jun 24 01:22:09 Rajat]:test-new>ls -ltr
+total 0
+lrwxr-xr-x  1 rohanrajat  staff  7 Jun 24 01:22 hulk -> ../hulk
+[Mon Jun 24 01:22:10 Rajat]:test-new>
+
+[Mon Jun 24 01:23:52 Rajat]:test>ll
+total 0
+-rw-r--r--  1 rohanrajat  staff   0 Jun 24 01:20 hulk
+drwxr-xr-x  3 rohanrajat  staff  96 Jun 24 01:22 test-new
+[Mon Jun 24 01:23:53 Rajat]:test>echo "hulk is a superhero" > hulk 
+[Mon Jun 24 01:24:13 Rajat]:test>cat hulk 
+hulk is a superhero
+
+[Mon Jun 24 01:24:16 Rajat]:test>cd test-new/
+[Mon Jun 24 01:24:47 Rajat]:test-new>cat hulk 
+hulk is a superhero
+[Mon Jun 24 01:24:51 Rajat]:test-new>ls -ltr
+total 0
+lrwxr-xr-x  1 rohanrajat  staff  7 Jun 24 01:22 hulk -> ../hulk
+[Mon Jun 24 01:24:55 Rajat]:test-new>
+
+ls -i is used to get the inode value for file
+
+checking the inode vale of the soft link
+[Mon Jun 24 01:25:13 Rajat]:test-new>ls -ltri
+total 0
+8606531943 lrwxr-xr-x  1 rohanrajat  staff  7 Jun 24 01:22 hulk -> ../hulk
+
+checking the inode value of the actual file
+[Mon Jun 24 01:25:52 Rajat]:test>ls -ltri hulk
+8606531914 -rw-r--r--  1 rohanrajat  staff  20 Jun 24 01:24 hulk
+[Mon Jun 24 01:25:53 Rajat]:test>
+
+Removing the original file hulk now
+
+[Mon Jun 24 01:28:12 Rajat]:test>ll
+total 8
+drwxr-xr-x  3 rohanrajat  staff  96 Jun 24 01:22 test-new
+-rw-r--r--  1 rohanrajat  staff  20 Jun 24 01:24 hulk
+[Mon Jun 24 01:28:44 Rajat]:test>rm hulk
+[Mon Jun 24 01:28:46 Rajat]:test>cd test-new/
+[Mon Jun 24 01:28:49 Rajat]:test-new>ll
+total 0
+lrwxr-xr-x  1 rohanrajat  staff  7 Jun 24 01:22 hulk -> ../hulk
+[Mon Jun 24 01:28:50 Rajat]:test-new>cat hulk
+cat: hulk: No such file or directory
+
+link can't access the file as it is removed.
+
+Hard Link
+---------
+[Mon Jun 24 01:30:34 Rajat]:test>touch hulk
+[Mon Jun 24 01:30:40 Rajat]:test>echo "hulk is a superhero"
+hulk is a superhero
+[Mon Jun 24 01:30:50 Rajat]:test>echo "hulk is a superhero" > hulk
+[Mon Jun 24 01:30:55 Rajat]:test>ll
+total 8
+drwxr-xr-x  2 rohanrajat  staff  64 Jun 24 01:29 test-new
+-rw-r--r--  1 rohanrajat  staff  20 Jun 24 01:30 hulk
+[Mon Jun 24 01:30:56 Rajat]:test>cat hulk 
+hulk is a superhero
+[Mon Jun 24 01:30:58 Rajat]:test>cd test-new/
+[Mon Jun 24 01:31:11 Rajat]:test-new>ln ../hulk 
+[Mon Jun 24 01:31:20 Rajat]:test-new>ll
+total 8
+-rw-r--r--  2 rohanrajat  staff  20 Jun 24 01:30 hulk
+[Mon Jun 24 01:31:20 Rajat]:test-new>
+
+[Mon Jun 24 01:31:20 Rajat]:test-new>
+[Mon Jun 24 01:31:42 Rajat]:test-new>ls -i hulk
+8606532149 hulk
+[Mon Jun 24 01:31:47 Rajat]:test-new>ls -i ../hulk
+8606532149 ../hulk
+[Mon Jun 24 01:32:12 Rajat]:test-new>cat hulk
+hulk is a superhero
+[Mon Jun 24 01:32:24 Rajat]:test-new>..
+[Mon Jun 24 01:32:26 Rajat]:test>echo "123" >> hulk
+[Mon Jun 24 01:32:52 Rajat]:test>cat hulk
+hulk is a superhero
+123
+[Mon Jun 24 01:32:54 Rajat]:test>cd test-new/
+[Mon Jun 24 01:32:56 Rajat]:test-new>cat hulk
+hulk is a superhero
+123
+[Mon Jun 24 01:32:57 Rajat]:test-new>
+
+[Mon Jun 24 01:33:16 Rajat]:test>ll
+total 8
+drwxr-xr-x  3 rohanrajat  staff  96 Jun 24 01:31 test-new
+-rw-r--r--  2 rohanrajat  staff  24 Jun 24 01:32 hulk
+[Mon Jun 24 01:33:17 Rajat]:test>rm hulk
+[Mon Jun 24 01:33:19 Rajat]:test>ll
+total 0
+drwxr-xr-x  3 rohanrajat  staff  96 Jun 24 01:31 test-new
+[Mon Jun 24 01:33:25 Rajat]:test>cd test-new/
+[Mon Jun 24 01:33:27 Rajat]:test-new>ll
+total 8
+-rw-r--r--  1 rohanrajat  staff  24 Jun 24 01:32 hulk
+[Mon Jun 24 01:33:27 Rajat]:test-new>cat hulk
+hulk is a superhero
+123
+[Mon Jun 24 01:33:30 Rajat]:test-new>
+
+Here, inode remained same. 
+
