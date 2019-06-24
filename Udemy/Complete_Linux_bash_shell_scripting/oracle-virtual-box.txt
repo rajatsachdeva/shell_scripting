@@ -1,0 +1,15 @@
+What is Oracle VirtualBox ?
+--------------------------
+ - VirtualBox is a free and open-source hypervisor for x86
+    computers currently being developed by Oracle Corporation
+
+ - It installs on your existing Intel or AMD-based computers,
+    whether they are running Windows, Mac, Linux or Solaris
+    operating systems. It extends the capabilities of your 
+    existing computer so that it can run multiple operating
+    systems on one hardware at the same time
+
+                    Linux Windows MAC
+                    Oracle Virtual Box
+                   Operating System (windows or MAC)
+                        Hardware

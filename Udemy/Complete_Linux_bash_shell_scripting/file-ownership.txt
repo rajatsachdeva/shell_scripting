@@ -1,0 +1,89 @@
+File Ownership
+-------------
+
+There are 2 owners of a file or directory
+    - User and group
+
+Command to change file ownership
+    - chown and chgrp
+        - chown changes the ownership of a file
+        - chgrp changes the group ownership of a file
+
+Recursive ownership change option (Cascade)
+    - using option -R with above commands
+
+
+[Mon Jun 24 22:52:45 Rajat]:test>ls -ltr
+total 0
+-rw-r--r--  1 rohanrajat  staff  0 Jun 24 22:52 test_file
+
+Here, 
+3rd column specifies the user (rohanrajat) who owns this file/ directory
+4th column specifies the group (staff) to which user belongs to , that owns this file/ directory
+
+
+[Mon Jun 24 22:52:45 Rajat]:test>ls -ltr
+total 0
+-rw-r--r--  1 rohanrajat  staff  0 Jun 24 22:52 test_file
+[Mon Jun 24 22:52:51 Rajat]:test>su -
+Password:
+Rajats-MacBook-Pro-3:~ root# pwd
+/var/root
+
+# goto your test directory
+
+Rajats-MacBook-Pro-3:test root# ls -ltr
+total 0
+-rw-r--r--  1 rohanrajat  staff  0 Jun 24 22:52 test_file
+Rajats-MacBook-Pro-3:test root# chown root test_file
+Rajats-MacBook-Pro-3:test root# ls -ltr
+total 0
+-rw-r--r--  1 root  staff  0 Jun 24 22:52 test_file
+
+User changed to root
+
+Rajats-MacBook-Pro-3:test root# chgrp admin test_file
+Rajats-MacBook-Pro-3:test root# ls -ltr
+total 0
+-rw-r--r--  1 root  admin  0 Jun 24 22:52 test_file
+
+group changed to admin
+
+to check the available groups check /etc/group file 
+
+
+Now go back to previous login, and check if you are able to delete the file which is now owned by root.
+
+Rajats-MacBook-Pro-3:test root# exit
+logout
+[Mon Jun 24 23:04:28 Rajat]:test>ll
+total 0
+-rw-r--r--  1 root  admin  0 Jun 24 22:52 test_file
+[Mon Jun 24 23:04:29 Rajat]:test>whoami
+rohanrajat
+[Mon Jun 24 23:04:33 Rajat]:test>cat test_file 
+[Mon Jun 24 23:04:37 Rajat]:test>rm test_file 
+override rw-r--r--  root/admin for test_file? y
+[Mon Jun 24 23:05:05 Rajat]:test>ls -ltr
+
+we are able to delete the file. 
+Reason for the same is, rohanrajat is still the owner of the directory under which this file was present, and this user
+has all read write permissions
+
+drwxr-xr-x   2 rohanrajat  staff    64 Jun 24 23:05 test
+
+Under /etc directory only root has permissions to create and update files 
+
+Now, if you try to create a new file under this directory, you will not have permission, until you are logged in as
+root. 
+[Mon Jun 24 23:09:23 Rajat]:etc>touch myfile
+touch: myfile: Permission denied
+
+Once, logged in as root you can create the file
+[Mon Jun 24 23:09:39 Rajat]:etc>su -
+Password:
+Rajats-MacBook-Pro-3:~ root# cd /etc
+Rajats-MacBook-Pro-3:etc root# touch myfile
+Rajats-MacBook-Pro-3:etc root# ls -l myfile
+-rw-r--r--  1 root  wheel  0 Jun 24 23:11 myfile
+Rajats-MacBook-Pro-3:etc root#
