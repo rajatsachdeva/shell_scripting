@@ -13,3 +13,10 @@ chardetect  checknr     chg         chown       chsh
 chat        chflags     chgrp       chpass
 checkgid    chfn        chmod       chroot
 
+whatis ping
+ping(8)                  - send ICMP ECHO_REQUEST packets to network hosts
+
+whereis ping
+/sbin/ping
+
+
