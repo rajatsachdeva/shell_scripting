@@ -1,0 +1,15 @@
+TAB Completion and Up Arrow
+---------------------------
+
+- Hitting TAB key completes the available commands, files or directories
+    chm TAB -> chmod
+    ls j<TAB> -> list all the files starting with 'j'
+    cd Des<TAB> -> gives you suggestion about directories starting with 'Des'
+
+- Hitting up arrow key on the keyboard returns the last command ran
+
+ch<TAB>
+chardetect  checknr     chg         chown       chsh
+chat        chflags     chgrp       chpass
+checkgid    chfn        chmod       chroot
+
